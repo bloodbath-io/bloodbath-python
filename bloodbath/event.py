@@ -6,9 +6,9 @@ class Event:
   def find(id):
     url = f'{bloodbath.api_url}/events/{id}'
     response = requests.get(url, headers = Event.__headers())
-    result = response.json()
-    if 'data' in result.keys(): return result['data']
-    return result
+    return Event.__serializer(
+      response.json()
+    )
 
   @staticmethod
   def __headers():
@@ -18,3 +18,7 @@ class Event:
     return {
       "authorization": f'Bearer {bloodbath.api_key}'
     }
+
+  def __serializer(response):
+    if 'data' in response.keys(): return response['data']
+    return response

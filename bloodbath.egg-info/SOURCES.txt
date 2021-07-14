@@ -1,7 +1,10 @@
+README.md
 setup.py
 bloodbath/__init__.py
-bloodbath/myfunctions.py
+bloodbath/error.py
+bloodbath/event.py
 bloodbath.egg-info/PKG-INFO
 bloodbath.egg-info/SOURCES.txt
 bloodbath.egg-info/dependency_links.txt
+bloodbath.egg-info/requires.txt
 bloodbath.egg-info/top_level.txt
