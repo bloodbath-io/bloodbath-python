@@ -10,6 +10,27 @@ class Event:
       response.json()
     )
 
+  def cancel(id):
+    url = f'{bloodbath.api_url}/events/{id}'
+    response = requests.delete(url, headers = Event.__headers())
+    return Event.__serializer(
+      response.json()
+    )
+
+  def list():
+    url = f'{bloodbath.api_url}/events'
+    response = requests.get(url, headers = Event.__headers())
+    return Event.__serializer(
+      response.json()
+    )
+
+  def schedule(**arguments):
+    url = f'{bloodbath.api_url}/events'
+    response = requests.post(url, headers = Event.__headers(), json = arguments)
+    return Event.__serializer(
+      response.json()
+    )
+
   @staticmethod
   def __headers():
     if bloodbath.api_key is None:
