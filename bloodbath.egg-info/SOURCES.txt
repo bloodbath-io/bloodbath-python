@@ -1,0 +1,7 @@
+setup.py
+bloodbath/__init__.py
+bloodbath/myfunctions.py
+bloodbath.egg-info/PKG-INFO
+bloodbath.egg-info/SOURCES.txt
+bloodbath.egg-info/dependency_links.txt
+bloodbath.egg-info/top_level.txt
