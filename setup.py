@@ -6,7 +6,7 @@ setup(
     description='Python wrapper for Bloodbath',
     author='Laurent Schaffner',
     author_email='laurent.schaffner.code@gmail.com',
-    home_page='https://github.com/bloodbath-io/bloodbath-python',
+    url='https://github.com/bloodbath-io/bloodbath-python',
     license='MIT',
     install_requires=['requests==2.26.0'],
     setup_requires=['pytest-runner'],

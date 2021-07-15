@@ -2,7 +2,7 @@ Metadata-Version: 1.0
 Name: bloodbath
 Version: 1.0.0
 Summary: Python wrapper for Bloodbath
-Home-page: UNKNOWN
+Home-page: https://github.com/bloodbath-io/bloodbath-python
 Author: Laurent Schaffner
 Author-email: laurent.schaffner.code@gmail.com
 License: MIT
