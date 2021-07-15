@@ -1,4 +1,4 @@
-from datetime import datetime
+import datetime
 import bloodbath
 
 # Setup
@@ -18,7 +18,8 @@ def test_list():
 
 def test_schedule():
     response = bloodbath.Event.schedule(
-        scheduled_for=datetime.now().strftime('%Y-%m-%dT%H:%M:%S'),
+        # TODO: internal server crash with strftime('%Y-%m-%dT%H:%M:%S') we should investigate why
+        scheduled_for=(datetime.datetime.now() + datetime.timedelta(hours=1)).isoformat(), # "2022-07-14T19:54:06Z" <- this one works
         headers="{}",
         method="post",
         body="some body content",

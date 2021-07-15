@@ -1,4 +1,4 @@
-# Stripe Python Library
+# Bloodbath Python Library
 
 ![Build Status](https://github.com/bloodbath-io/bloodbath-python/actions/workflows/main.yml/badge.svg)
 
@@ -39,7 +39,7 @@ event = bloodbath.Event.find("b7ccff...")
 
 # schedule an event
 event = bloodbath.Event.schedule(
-  scheduled_for="REPLACE BY DATE"
+  scheduled_for=(datetime.datetime.now() + datetime.timedelta(hours=1)).isoformat(),
   headers="{}",
   method="post",
   body="some body content",
