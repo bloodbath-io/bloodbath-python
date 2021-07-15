@@ -10,6 +10,6 @@ setup(
     license='MIT',
     install_requires=['requests==2.26.0'],
     setup_requires=['pytest-runner'],
-    tests_require=['pytest==6.2.4'],
+    tests_require=['pytest==6.2.4','requests-mock'],
     test_suite='tests',
 )

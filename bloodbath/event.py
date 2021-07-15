@@ -41,5 +41,8 @@ class Event:
     }
 
   def __serializer(response):
-    if 'data' in response.keys(): return response['data']
+    if 'data' in response.keys():
+      if response['data'] is None:
+        return {}
+      return response['data']
     return response
